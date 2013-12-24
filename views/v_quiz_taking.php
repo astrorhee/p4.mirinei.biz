@@ -5,19 +5,17 @@
 <form method='POST' action="/quiz/result?q_id=<?php echo $q_id; ?>">
     <p><?php echo $qstn; ?></p>
     <p>
-    <?php
-        foreach ($choice as $key => $value) {
-            echo "<input type='radio' name='answer' value='".$value."'>".$value."</input><br />"; 
-            echo "<br>";
-            ;
-        }
-    ?>
+        <?php
+            foreach ($choice as $key => $value) {
+                echo "<input type='radio' name='answer' value='".$value."'>".$value."</input><br />"; 
+                echo "<br>";
+            }
+        ?>
     </p>
     <p style="margin-top: -10px;">
         <input type='submit' value='Submit'>
     </p>
 </form>
-
 
 <div id="ss_info" title="The Solay System Basic Data" hidden>
     <table style="text-align: center;">

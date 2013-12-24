@@ -28,11 +28,11 @@ class quiz_controller extends base_controller {
         if (!!$_POST['question'] and !!$_POST['c_answer'] and !!$_POST['ic_answer_1'] and !!$_POST['ic_answer_2'] and !!$_POST['ic_answer_3']) {
 
             $qz_id = DB::instance(DB_NAME)->insert('quiz_bank', $_POST);
-
             Router::redirect("/quiz/taking/".$qz_id);
 
         } else {
             Router::redirect("/quiz/making/error");
+
         }
     }
 
@@ -41,7 +41,6 @@ class quiz_controller extends base_controller {
 
         $this->template->title   = "Taking a Quiz Problem!";
         $this->template->content = View::instance('v_quiz_taking');
-
 
         if (empty($qz_id)) {
             $q = 'SELECT quiz_id
@@ -74,9 +73,6 @@ class quiz_controller extends base_controller {
 
     public function result() {
 
-        // Note that !!$var is equivalent to !empty($var) .
-//        if (!!$_POST['first_name'] and !!$_POST['last_name'] and !!$_POST['email'] and !!$_POST['password']) {
- 
         $this->template->title   = "Quiz Result";
         $this->template->content = View::instance('v_quiz_result');
 
@@ -90,25 +86,17 @@ class quiz_controller extends base_controller {
 
         $ans = DB::instance(DB_NAME)->select_field($q);
 
-
-        print_r($ans);
-
         if ($_POST['answer'] == $ans){
             $score = 1;
-            echo "You got it right!";
         }else{
             $score = 0;
-            echo "You got it wrong!";
         }
-
 
         $this->template->content->score = $score;
         $this->template->content->q_id = $_GET['q_id'];
         echo $this->template;
 
-
     }
-
 
 }
 

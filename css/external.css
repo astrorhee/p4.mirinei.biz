@@ -10,29 +10,28 @@ div {
 
 h1 { 
 	font-size: 20pt;
-    text-align: center;
-    color: #1A5D91; 
+	text-align: center;
+	color: #1A5D91;
 }
 
-
 h2 {
-    font-size: 14pt;
-    text-align: center;
+	font-size: 14pt;
+	text-align: center;
 }
 
 h3 {
-    font-style: normal;
-    text-align: center;
-    font-size: 12.0pt;
-    margin-bottom: -8.0px;
+	font-style: normal;
+	text-align: center;
+	font-size: 12.0pt;
+	margin-bottom: -8.0px;
 }
 
 ul {
 	font-family: Arial;
-    font-style: normal;
-    font-size: 11pt;
-    margin-left: 24px;
-    margin-right: 25px; 
+	font-style: normal;
+	font-size: 11pt;
+	margin-left: 24px;
+	margin-right: 25px;
 }
 
 p {
@@ -51,11 +50,10 @@ a:active  {text-decoration:none; color:#1A5D91;}
 
 .window-inner {
 	border-radius:10px;
-    border: 1px solid #BDCAD8;
-    background: white url("/images/bg2.jpg") repeat;
-    margin-left:0px;
+	border: 1px solid #BDCAD8;
+	background: white url("/images/bg2.jpg") repeat;
+	margin-left:0px;
 }
-
 
 .error {
 	color: red;
@@ -73,9 +71,8 @@ img.center {
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-    background-color: transparent;
+	background-color: transparent;
 }
-
 
 #navbody {
 	position:relative;
